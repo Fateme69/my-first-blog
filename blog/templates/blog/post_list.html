@@ -5,7 +5,17 @@
     <title>Fati's blog</title>
 </head>
 <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <h1>Posts</h1>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <h2>{{ post.title }}</h2>
+            <article>{{ post.text }}</article>
+        </li>
+        {% empty %}
+            <li>No topics have been added yet.</li>
+       {% endfor %}
+    </ul>
+
 </body>
 </html>
